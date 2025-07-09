@@ -55,6 +55,15 @@ export class MyMCP extends McpAgent {
 				return { content: [{ type: "text", text: String(result) }] };
 			}
 		);
+
+		// Remaining range tool with static hard-coded value
+		this.server.tool(
+			"remaining_range",
+			{},
+			async () => ({
+				content: [{ type: "text", text: "Remaining range: 245 miles" }],
+			})
+		);
 	}
 }
 
